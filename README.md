@@ -1,0 +1,22 @@
+# Driverless Car Commentary
+
+The code provided demonstrates a simplified implementation of a driverless car which is capable of accelerating, decelerating, driving at a specific target speed, stopping, and parking. It also includes a brake system, brake lights, brake light detection, road sign detection, a LiDAR sensor for distance measurement, and a camera for capturing images and road signs. When starting to code my driverless car it was becoming complicated to incorporate all of the above, therefore I decided to leave out the traffic light detection class but continue with the list above. I felt I had enough to show my understanding of OOP and demonstrate how my driverless car can ‘stop’ with the classes I have applied.
+
+The code has been organised into classes and methods, separating concerns, and promoting modularity. Each class has a specific responsibility related to its functionality, such as the ‘DriverlessCar’ class for car control, the ‘BrakeSystem’ class for managing the brakes, and the ‘BrakeLightDetector’ class for detecting brake lights. This includes several simulation components to represent real world interactions and measurements. For example, the ‘Camera’ class simulates image capture, the ‘LightDetectionRanging’ class simulates distance measurement, and the ‘RoadSignDetection’ class simulates Optical Character Recognition (OCR). These simplifications allow the code to focus on the main logic without the need for complex external dependencies.
+
+The ‘DriverlessCar’ class maintains a speed attribute and a state attribute to track the car's current speed and state (e.g., "driving," "stopped," or "parked"). The drive, stop, and park methods control the car's behaviour based on these attributes and the target speed provided.
+
+The ‘BrakeSystem’ and ‘BrakeLights’ classes are responsible for managing the brake system and controlling the brake lights. The ‘BrakeSystem’ class has methods to apply and release the brakes, while the ‘BrakeLights’ class controls the status of the brake lights. This separation allows for more flexible control over the braking mechanism.
+
+The ‘BrakeLightDetector’ class simulates image processing for brake light detection. It receives an image from the camera and processes it to determine if brake lights are present. Similarly, the ‘RoadSignDetection’ class simulates OPR to detect road signs. These implementations are simplified placeholders, and they would need to be replaced with actual image processing and OCR algorithms for a real-world system.
+
+The test case in the provided code is the Python’s assert statement, which is designed to verify the behaviour of the ‘DriverlessCar’ class. These checks can test if specific assumptions are true while developing code, they are a convenient tool for documenting, debugging, and testing code during development. This helps ensure that the methods of the class, such as drive, stop, and park, are functioning correctly otherwise If any of the assertions turn false, then it would suggest there is a bug within the code. (Ramos, 2023) The purpose of these test cases is to ensure that the behaviour of the ‘DriverlessCar’ class aligns with the expected outcomes.
+
+Lastly the code currently lacks error handling mechanisms and exception handling for exceptional cases, these can lead to unexpected behaviour or even stop the programme working, within python it provides assorted functions and mechanisms to handle these issues and improve the robustness of the code (Awan, 2023). In a real-world scenario, it would be crucial to handle unexpected events and errors gracefully. For example, handling sensor failures, communication errors, or unexpected inputs is essential to ensure the safety and reliability of the system. If I was to design this again, I would factor these into my coding. The code is a work in progress and provides a good foundation for a driverless car system, there are a number of additional classes that could be added for further development and integration with actual hardware and algorithms to function in a real-world scenario.
+
+Words: 618
+
+References:
+Awan, A. (2023). Exception Handling in Python: Catch and Handle Errors with valueerror, try except, typeerror, & raise in Python. [online] www.datacamp.com. Available at: https://www.datacamp.com/tutorial/exception-handling-python.
+
+Ramos, L.P. (2023) Python’s assert: Debug and test your code like A pro, Real Python. Available at: https://realpython.com/python-assert-statement/ (Accessed: 18 October 2023).
